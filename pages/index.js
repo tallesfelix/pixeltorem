@@ -41,7 +41,7 @@ export default function Home() {
         <h1 className={styles.mainTitle}>Calculadora PX para REM</h1>
         <div className={styles.inputsContainer}>
           <div className={styles.inputWrapper}>
-            <label className={styles.label} htmlFor='rem-units'>Pixels</label>
+            <label className={styles.label} htmlFor='px-units'>Pixels</label>
             <input className={styles.input} onChange={(e) => onChangePx(e)} type="number" min="0" name="px-units" id="px-units" value={px}></input>
             <p className={styles.innerLabel}>px</p>
           </div>
