@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Script from 'next/script'
 import { useReducer, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
@@ -34,9 +35,22 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Conversor REM para PX</title>
-        <meta name="description" content="Conversor de unidades REM para PX" />
+        <title>Conversor PX para REM</title>
+        <meta name="description" content="Conversor de unidades PX para REM" />
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-Z1BYS1XB1V"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-Z1BYS1XB1V');
+        `}
+      </Script>
       <main className={styles.main}>
         <h1 className={styles.mainTitle}>Calculadora PX para REM</h1>
         <div className={styles.inputsContainer}>
