@@ -39,7 +39,7 @@ export default function Home() {
         <meta name="description" content="Conversor de unidades PX para REM" />
       </Head>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-Z1BYS1XB1V"
+        src={`https://www.googletagmanager.com/gtag/js?id='${process.env.NEXT_PUBLIC_GA_ID}'`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -48,7 +48,7 @@ export default function Home() {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-Z1BYS1XB1V');
+          gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
         `}
       </Script>
       <main className={styles.main}>
